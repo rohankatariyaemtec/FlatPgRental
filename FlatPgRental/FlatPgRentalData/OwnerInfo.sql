@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[OwnerInfo]
+(
+	[OwnerID] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [OwnerName] VARCHAR(50) NOT NULL, 
+    [OwnerContact] DECIMAL(10) NOT NULL, 
+    [OwnerEmail] VARCHAR(MAX) NULL, 
+    [PGID] INT NULL FOREIGN KEY (PGID) REFERENCES PGInfo(PGID)
+)
